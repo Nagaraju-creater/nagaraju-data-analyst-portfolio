@@ -20,8 +20,8 @@ export default function HeroSection() {
       </div>
 
       {/* Compact vertical padding */}
-      <div className="page-container relative z-10 py-6 sm:py-8 lg:py-10">
-        <div className="flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
+      <div className="page-container relative z-10 py-6 sm:py-7 lg:py-8">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           {/* Left: Text content */}
           <div className="max-w-xl space-y-4">
             {/* Availability + small context pill row */}
@@ -36,26 +36,44 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Main heading */}
+            {/* Main heading + mobile profile on the right */}
             <div className="space-y-2">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-400">
-                Data Analyst · SQL · Excel · Power BI · Tableau
-              </p>
+              <div className="flex items-start gap-3 sm:gap-4 sm:block">
+                <div className="flex-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-400">
+                    Data Analyst · SQL · Excel · Power BI · Tableau
+                  </p>
 
-              <h1 className="text-[1.7rem] font-semibold leading-tight text-slate-50 sm:text-[1.9rem] lg:text-[2.2rem]">
-                Hi, I&apos;m{" "}
-                <span className="relative inline-block">
-                  <span className="absolute -inset-1 rounded-xl bg-gradient-r from-cyan-500/40 via-sky-500/40 to-cyan-400/40 blur-md" />
-                  <span className="relative rounded-xl bg-slate-950/80 px-2 text-cyan-200 shadow-lg shadow-cyan-500/30">
-                    Nagaraju&nbsp;K
-                  </span>
-                </span>
-                .
-                <br className="hidden sm:block" />
-                <span className="mt-1 block bg-gradient-r from-slate-100 via-cyan-200 to-slate-100 bg-clip-text text-transparent">
-                  I turn raw data into clear decisions.
-                </span>
-              </h1>
+                  <h1 className="mt-2 text-[1.7rem] font-semibold leading-tight text-slate-50 sm:text-[1.9rem] lg:text-[2.2rem]">
+                    Hi, I&apos;m{" "}
+                    <span className="relative inline-block">
+                      <span className="absolute -inset-1 rounded-xl bg-gradient-r from-cyan-500/40 via-sky-500/40 to-cyan-400/40 blur-md" />
+                      <span className="relative rounded-xl bg-slate-950/80 px-2 text-cyan-200 shadow-lg shadow-cyan-500/30">
+                        Nagaraju&nbsp;K
+                      </span>
+                    </span>
+                    .
+                    <br className="hidden sm:block" />
+                    <span className="mt-1 block bg-gradient-r from-slate-100 via-cyan-200 to-slate-100 bg-clip-text text-transparent">
+                      I turn raw data into clear decisions.
+                    </span>
+                  </h1>
+                </div>
+
+                {/* Mobile-only profile avatar to the right of intro */}
+                <div className="sm:hidden">
+                  <div className="relative h-16 w-16 overflow-hidden rounded-full border border-cyan-400/70 bg-slate-950 shadow-md shadow-cyan-500/40">
+                    <Image
+                      src="/profile.jpeg"
+                      alt="Profile photo of Nagaraju K"
+                      width={80}
+                      height={80}
+                      className="h-full w-full object-cover"
+                    />
+                    <span className="absolute bottom-1 right-1 h-2.5 w-2.5 rounded-full border border-slate-900 bg-emerald-400" />
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Subtitle (compact) */}
@@ -77,8 +95,8 @@ export default function HeroSection() {
               keep improving every day.
             </p>
 
-            {/* Data pipeline strip */}
-            <div className="mt-1 flex flex-wrap items-center gap-1.5 rounded-2xl border border-slate-700/70 bg-slate-950/70 p-2 text-[10px] text-slate-300">
+            {/* Data pipeline strip – hidden on very small screens to reduce height */}
+            <div className="mt-1 hidden flex-wrap items-center gap-1.5 rounded-2xl border border-slate-700/70 bg-slate-950/70 p-2 text-[10px] text-slate-300 sm:flex">
               {["Collect", "Clean", "Analyze", "Visualize", "Share"].map(
                 (step, idx, arr) => (
                   <div key={step} className="flex items-center gap-1.5">
@@ -132,8 +150,8 @@ export default function HeroSection() {
 
           {/* Right: Profile + "live" dashboard */}
           <div className="flex flex-1 flex-col items-center gap-4 sm:flex-row sm:items-stretch lg:flex-row lg:justify-end">
-            {/* Profile card */}
-            <div className="relative w-full max-w-xs rounded-3xl border border-slate-700/80 bg-slate-900/80 p-4 shadow-xl shadow-cyan-500/25 backdrop-blur">
+            {/* Profile card – hidden on very small screens, visible from sm and up */}
+            <div className="relative hidden w-full max-w-xs rounded-3xl border border-slate-700/80 bg-slate-900/80 p-4 shadow-xl shadow-cyan-500/25 backdrop-blur sm:block">
               {/* halo */}
               <div className="pointer-events-none absolute -inset-0.5 -z-10 rounded-3xl bg-gradient-br from-cyan-500/40 via-sky-500/20 to-transparent opacity-70 blur-xl" />
 
@@ -187,8 +205,8 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Live-style dashboard card */}
-            <div className="w-full max-w-sm rounded-3xl border border-slate-700/80 bg-slate-900/90 p-3 shadow-xl shadow-slate-900/60">
+            {/* Live-style dashboard card – hidden on phones, visible from md up */}
+            <div className="hidden w-full max-w-sm rounded-3xl border border-slate-700/80 bg-slate-900/90 p-3 shadow-xl shadow-slate-900/60 md:block">
               <div className="mb-2 flex items-center justify-between text-[11px]">
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.18em] text-slate-400">
@@ -207,9 +225,7 @@ export default function HeroSection() {
               <div className="mb-2 grid grid-cols-3 gap-2 text-[10px]">
                 <div className="rounded-xl bg-slate-950/80 p-2">
                   <p className="text-slate-400">Projects</p>
-                  <p className="mt-1 text-xs font-semibold text-cyan-300">
-                    5
-                  </p>
+                  <p className="mt-1 text-xs font-semibold text-cyan-300">5</p>
                   <p className="text-[9px] text-emerald-400">+3 recently</p>
                 </div>
                 <div className="rounded-xl bg-slate-950/80 p-2">
