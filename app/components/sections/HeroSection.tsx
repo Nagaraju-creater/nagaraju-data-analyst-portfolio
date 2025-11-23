@@ -53,7 +53,7 @@ export default function HeroSection() {
                       </span>
                     </span>
                     .
-                    <span className="mt-1 block bg-gradient-r from-slate-100 via-cyan-200 to-slate-100 bg-clip-text text-transparent">
+                    <span className="mt-0 block bg-gradient-r from-slate-100 via-cyan-200 to-slate-100 bg-clip-text text-transparent">
                       I turn raw data into clear decisions.
                     </span>
                   </h1>
@@ -132,7 +132,7 @@ export default function HeroSection() {
             </div>
 
             {/* Tech tags row */}
-            <div className="flex flex-nowrap items-center gap-4 pt-2 text-[11px] text-slate-400">
+            <div className="flex flex-nowrap items-center gap-1 pt-2 text-[9px] text-slate-400">
               <span className="font-medium text-slate-300">Core tools:</span>
               {["SQL", "Excel", "Power BI", "Tableau", "Data Visualization"].map(
                 (tool) => (
