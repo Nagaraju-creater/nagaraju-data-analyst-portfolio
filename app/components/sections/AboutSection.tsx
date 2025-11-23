@@ -85,7 +85,7 @@ export default function AboutSection() {
           {/* Right: Highlight cards / mini-timeline */}
           <div className="space-y-4">
             {/* Stats row – 2 columns on mobile, 3 on sm+ */}
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 text-center">
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-3 text-center">
               <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 px-3 py-3 sm:py-4 shadow-md shadow-cyan-500/10">
                 <p className="text-[11px] text-slate-400">Degree</p>
                 <p className="mt-1 text-xs font-semibold text-slate-100">
