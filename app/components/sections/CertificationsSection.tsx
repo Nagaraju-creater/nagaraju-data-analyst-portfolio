@@ -18,7 +18,7 @@ const certificates: Certificate[] = [
     date: "29 Aug 2025",
     code: "8877567",
     level: "data",
-    href: "/certificates/data-analyst-course.pdf",
+    href: "/certificates/free-data-analyst-course.pdf",
   },
   {
     title: "Business Analytics with Excel",
@@ -26,7 +26,7 @@ const certificates: Certificate[] = [
     date: "03 Sep 2025",
     code: "8906391",
     level: "data",
-    href: "/certificates/business-analytics-excel.pdf",
+    href: "/certificates/business-analytics-with-excel.pdf",
   },
   {
     title: "Website UI/UX Designing using ChatGPT",
@@ -34,7 +34,7 @@ const certificates: Certificate[] = [
     date: "03 Sep 2025",
     code: "8906855",
     level: "design",
-    href: "/certificates/ui-ux-chatgpt.pdf",
+    href: "/certificates/ui-ux-design-using-chatgpt.pdf",
   },
   {
     title: "Power BI for Beginners",
@@ -42,7 +42,7 @@ const certificates: Certificate[] = [
     date: "05 Sep 2025",
     code: "8917520",
     level: "bi",
-    href: "/certificates/power-bi-beginners.pdf",
+    href: "/certificates/power-bi-for-beginners.pdf",
   },
 ];
 
