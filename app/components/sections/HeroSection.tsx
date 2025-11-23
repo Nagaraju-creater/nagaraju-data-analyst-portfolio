@@ -132,13 +132,13 @@ export default function HeroSection() {
             </div>
 
             {/* Tech tags row */}
-            <div className="flex flex-nowrap items-center gap-1 pt-2 text-[9px] text-slate-400">
+            <div className="flex flex-nowrap items-center gap-4 pt-2 text-[11px] text-slate-400">
               <span className="font-medium text-slate-300">Core tools:</span>
               {["SQL", "Excel", "Power BI", "Tableau", "Data Visualization"].map(
                 (tool) => (
                   <span
                     key={tool}
-                    className="rounded-full bg-slate-900/80 px-2 py-1 text-[11px] text-cyan-200"
+                    className="rounded-full bg-slate-900/80 px-2 py-1 text-[9px] text-cyan-200"
                   >
                     {tool}
                   </span>
