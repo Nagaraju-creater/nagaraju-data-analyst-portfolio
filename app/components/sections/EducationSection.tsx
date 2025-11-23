@@ -52,7 +52,7 @@ function SectionTitle({ label }: { label: string }) {
 
 export default function EducationSection() {
   return (
-    <section id="education" className="py-14 sm:py-16">
+    <section id="education" className="scroll-mt-24 py-14 sm:py-16">
       <div className="page-container">
         <SectionTitle label="Education" />
 
@@ -60,7 +60,7 @@ export default function EducationSection() {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="pointer-events-none absolute left-2.5 top-2 h-[calc(100%-1rem)] w-px bg-linear-to-b from-cyan-400/70 via-slate-700/70 to-transparent sm:left-4" />
+            <div className="pointer-events-none absolute left-2.5 top-2 h-[calc(100%-1rem)] w-px bg-gradient-b from-cyan-400/70 via-slate-700/70 to-transparent sm:left-4" />
 
             <ul className="space-y-5">
               {educationData.map((item) => {
@@ -91,8 +91,8 @@ export default function EducationSection() {
                           className={[
                             "inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em]",
                             isHighlight
-                              ? "bg-cyan-500/15 text-cyan-200 border border-cyan-400/60"
-                              : "bg-slate-900/80 text-slate-300 border border-slate-600/70",
+                              ? "border border-cyan-400/60 bg-cyan-500/15 text-cyan-200"
+                              : "border border-slate-600/70 bg-slate-900/80 text-slate-300",
                           ].join(" ")}
                         >
                           {item.level}
@@ -115,7 +115,7 @@ export default function EducationSection() {
                       {/* Score */}
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-xs">
                         <div className="inline-flex items-center gap-2 rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-3 py-1.5 text-cyan-100">
-                          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
                           <span className="font-medium">
                             {item.scoreLabel}:{" "}
                             <span className="text-white">
@@ -138,11 +138,11 @@ export default function EducationSection() {
           </div>
 
           {/* Summary card */}
-          <aside className="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-md shadow-cyan-500/10">
+          <aside className="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 text-xs text-slate-300 shadow-md shadow-cyan-500/10">
             <h3 className="text-sm font-semibold text-slate-100">
               Academic Snapshot
             </h3>
-            <p className="mt-2 text-xs text-slate-300">
+            <p className="mt-2">
               My education journey built a strong base in{" "}
               <span className="font-medium text-cyan-200">
                 logical reasoning, mathematics, and structured problem solving
@@ -150,7 +150,7 @@ export default function EducationSection() {
               , which supports my transition into data analytics.
             </p>
 
-            <div className="mt-4 grid grid-cols-2 gap-3 text-xs">
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div className="rounded-xl border border-slate-700/80 bg-slate-950/70 p-3">
                 <p className="text-[11px] text-slate-400">Highest Degree</p>
                 <p className="mt-1 font-semibold text-slate-100">
@@ -169,7 +169,7 @@ export default function EducationSection() {
               </div>
             </div>
 
-            <div className="mt-4 rounded-xl border border-cyan-500/40 bg-cyan-500/5 p-3 text-xs text-slate-200">
+            <div className="mt-4 rounded-xl border border-cyan-500/40 bg-cyan-500/5 p-3">
               <p className="font-semibold text-cyan-200">
                 How it supports data analytics
               </p>
@@ -177,15 +177,15 @@ export default function EducationSection() {
                 <li className="flex gap-2">
                   <span className="mt-[5px] h-1 w-3 rounded-full bg-cyan-400" />
                   <span>
-                    Engineering background helps in understanding complex
-                    systems and problem solving.
+                    Engineering background helps in understanding complex systems
+                    and problem solving.
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-[5px] h-1 w-3 rounded-full bg-cyan-400" />
                   <span>
-                    Strong math and logic skills translate well into analytics
-                    and statistics.
+                    Strong math and logic skills translate well into analytics and
+                    statistics.
                   </span>
                 </li>
                 <li className="flex gap-2">

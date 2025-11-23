@@ -6,12 +6,12 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 py-16 sm:py-20 bg-slate-950"
+      className="scroll-mt-24 py-14 sm:py-20 bg-slate-950"
     >
       <div className="page-container">
         {/* Section header */}
-        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
+        <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+          <div className="w-full max-w-xl">
             <p className="inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-[11px] font-medium text-cyan-100 shadow-sm">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
               Let&apos;s work together
@@ -19,7 +19,7 @@ export default function ContactSection() {
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
               Contact
             </h2>
-            <p className="mt-2 text-sm text-slate-400 max-w-xl">
+            <p className="mt-2 text-sm text-slate-400">
               I&apos;m actively looking for{" "}
               <span className="font-semibold text-cyan-200">Data Analyst</span>{" "}
               opportunities. Whether it&apos;s a full-time role, internship, or
@@ -28,7 +28,7 @@ export default function ContactSection() {
           </div>
 
           {/* Small info pill */}
-          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 px-4 py-3 text-xs text-slate-300 shadow-md shadow-slate-900/60">
+          <div className="w-full max-w-xs rounded-2xl border border-slate-700/70 bg-slate-900/70 px-4 py-3 text-xs text-slate-300 shadow-md shadow-slate-900/60">
             <p className="font-medium text-slate-100">
               Based in Hosur, India 🇮🇳
             </p>
@@ -43,7 +43,7 @@ export default function ContactSection() {
           {/* Left: contact methods & reasons */}
           <div className="space-y-4">
             {/* Why reach out */}
-            <div className="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-4 shadow-md shadow-slate-900/70">
+            <div className="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-4 sm:p-5 shadow-md shadow-slate-900/70">
               <h3 className="text-sm font-semibold text-slate-100">
                 How I can help
               </h3>
@@ -82,8 +82,8 @@ export default function ContactSection() {
             {/* Contact cards */}
             <div className="grid gap-3 sm:grid-cols-2">
               {/* Email card */}
-              <div className="group relative overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/80 p-4 shadow-md shadow-slate-900/70 transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-400/80 hover:shadow-cyan-500/20">
-                <div className="pointer-events-none absolute -inset-16 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+              <div className="group relative overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/80 p-4 sm:p-5 shadow-md shadow-slate-900/70 transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-400/80 hover:shadow-cyan-500/20">
+                <div className="pointer-events-none absolute -inset-16 opacity-0 transition-opacity duration-500 group-hover:opacity-30">
                   <div className="h-full w-full bg-gradient-br from-cyan-500/40 via-sky-500/20 to-transparent blur-3xl" />
                 </div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
@@ -103,8 +103,8 @@ export default function ContactSection() {
               </div>
 
               {/* Phone card */}
-              <div className="group relative overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/80 p-4 shadow-md shadow-slate-900/70 transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-400/80 hover:shadow-cyan-500/20">
-                <div className="pointer-events-none absolute -inset-16 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+              <div className="group relative overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/80 p-4 sm:p-5 shadow-md shadow-slate-900/70 transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-400/80 hover:shadow-cyan-500/20">
+                <div className="pointer-events-none absolute -inset-16 opacity-0 transition-opacity duration-500 group-hover:opacity-30">
                   <div className="h-full w-full bg-gradient-br from-emerald-400/40 via-cyan-500/10 to-transparent blur-3xl" />
                 </div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
@@ -120,9 +120,9 @@ export default function ContactSection() {
             </div>
 
             {/* Availability */}
-            <div className="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-4 text-xs sm:text-sm text-slate-300 shadow-md shadow-slate-900/70">
-              <div className="flex items-center gap-2">
-                <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            <div className="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-4 sm:p-5 text-xs sm:text-sm text-slate-300 shadow-md shadow-slate-900/70">
+              <div className="flex items-start gap-2">
+                <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                 <p className="font-medium text-slate-100">
                   Currently open to: Data Analyst, Business Analyst (entry level),
                   Reporting Analyst roles.
@@ -139,9 +139,9 @@ export default function ContactSection() {
           <div className="relative">
             {/* Glow behind card */}
             <div className="pointer-events-none absolute -inset-4 rounded-3xl bg-gradient-br from-cyan-500/25 via-slate-900 to-sky-500/20 blur-3xl opacity-70" />
-            <div className="relative rounded-3xl border border-slate-700/80 bg-slate-950/90 p-5 sm:p-6 shadow-xl shadow-slate-900/80">
-              <div className="flex items-center justify-between gap-3">
-                <div>
+            <div className="relative rounded-3xl border border-slate-700/80 bg-slate-950/90 p-4 sm:p-6 shadow-xl shadow-slate-900/80">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div className="max-w-md">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
                     Let&apos;s talk
                   </p>
@@ -153,14 +153,14 @@ export default function ContactSection() {
                     get back to you.
                   </p>
                 </div>
-                <div className="hidden sm:flex flex-col items-end gap-1 text-[11px] text-slate-400">
+                <div className="mt-2 hidden flex-col items-end gap-1 text-[11px] text-slate-400 sm:flex">
                   <span className="rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2 py-1">
                     Response: usually within 24 hrs
                   </span>
                 </div>
               </div>
 
-              {/* Faux form (you can wire this later if you want) */}
+              {/* Faux form (non-functional for now) */}
               <form
                 className="mt-5 space-y-3 text-xs sm:text-sm"
                 onSubmit={(e) => e.preventDefault()}
@@ -169,7 +169,7 @@ export default function ContactSection() {
                   <label className="block text-slate-300" htmlFor="name">
                     Your name
                   </label>
-                  <div className="rounded-xl border border-slate-700/80 bg-slate-900/80 px-3 py-2 text-slate-100 shadow-inner shadow-slate-900/80 focus-within:border-cyan-400/80 focus-within:shadow-cyan-500/20 transition">
+                  <div className="rounded-xl border border-slate-700/80 bg-slate-900/80 px-3 py-2 text-slate-100 shadow-inner shadow-slate-900/80 transition focus-within:border-cyan-400/80 focus-within:shadow-cyan-500/20">
                     <input
                       id="name"
                       type="text"
@@ -183,7 +183,7 @@ export default function ContactSection() {
                   <label className="block text-slate-300" htmlFor="email">
                     Work email
                   </label>
-                  <div className="rounded-xl border border-slate-700/80 bg-slate-900/80 px-3 py-2 text-slate-100 shadow-inner shadow-slate-900/80 focus-within:border-cyan-400/80 focus-within:shadow-cyan-500/20 transition">
+                  <div className="rounded-xl border border-slate-700/80 bg-slate-900/80 px-3 py-2 text-slate-100 shadow-inner shadow-slate-900/80 transition focus-within:border-cyan-400/80 focus-within:shadow-cyan-500/20">
                     <input
                       id="email"
                       type="email"
@@ -197,12 +197,12 @@ export default function ContactSection() {
                   <label className="block text-slate-300" htmlFor="message">
                     What would you like to discuss?
                   </label>
-                  <div className="rounded-xl border border-slate-700/80 bg-slate-900/80 px-3 py-2 text-slate-100 shadow-inner shadow-slate-900/80 focus-within:border-cyan-400/80 focus-within:shadow-cyan-500/20 transition">
+                  <div className="rounded-xl border border-slate-700/80 bg-slate-900/80 px-3 py-2 text-slate-100 shadow-inner shadow-slate-900/80 transition focus-within:border-cyan-400/80 focus-within:shadow-cyan-500/20">
                     <textarea
                       id="message"
                       rows={4}
                       placeholder="Briefly describe the role, project, or dashboard you have in mind..."
-                      className="w-full bg-transparent text-xs sm:text-sm outline-none placeholder:text-slate-500 resize-none"
+                      className="w-full resize-none bg-transparent text-xs sm:text-sm outline-none placeholder:text-slate-500"
                     />
                   </div>
                 </div>
@@ -224,13 +224,9 @@ export default function ContactSection() {
               </form>
 
               {/* Small trust footer */}
-              <div className="mt-5 border-t border-slate-800/80 pt-3 text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
-                <p>
-                  I respect your time and inbox — no spam, just a genuine reply.
-                </p>
-                <p>
-                  Prefer LinkedIn? You can easily add a link here later.
-                </p>
+              <div className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80 pt-3 text-[11px] text-slate-400">
+                <p>I respect your time and inbox — no spam, just a genuine reply.</p>
+                <p>Prefer LinkedIn? You can easily add a link here later.</p>
               </div>
             </div>
           </div>

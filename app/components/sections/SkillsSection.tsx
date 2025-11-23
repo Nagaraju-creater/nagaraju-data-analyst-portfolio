@@ -139,6 +139,7 @@ export default function SkillsSection() {
           </h2>
           <div className="h-px flex-1 bg-gradient-l from-cyan-500/80 via-cyan-400/50 to-transparent" />
         </div>
+
         {/* Optional legend / categories row */}
         <div className="mb-5 flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
           <span className="rounded-full bg-slate-900/80 px-2 py-1">
@@ -223,7 +224,7 @@ function SkillCard({
         <div className="absolute -inset-24 animate-[spin_3.8s_linear_infinite] bg-[conic-gradient(from_120deg,rgba(34,211,238,0.1),transparent_40%,rgba(56,189,248,0.2),transparent_70%)]" />
       </div>
 
-      <div className="relative flex items-center justify-between gap-3">
+      <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         {/* Left: category pill + logo + text */}
         <div className="space-y-2">
           {/* Category pill */}
@@ -258,7 +259,7 @@ function SkillCard({
         </div>
 
         {/* Right: donut chart + counter */}
-        <div className="relative flex items-center justify-center">
+        <div className="relative mt-1 flex items-center justify-center sm:mt-0">
           <svg
             width={72}
             height={72}

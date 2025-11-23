@@ -90,7 +90,7 @@ export default function CertificationsSection() {
           <div className="h-px flex-1 bg-gradient-l from-cyan-500/80 via-cyan-400/50 to-transparent" />
         </div>
 
-        {/* No paragraph here – straight to cards, as you wanted */}
+        {/* Cards grid */}
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {certificates.map((cert, index) => (
             <article
@@ -140,8 +140,8 @@ export default function CertificationsSection() {
                   </div>
                 </dl>
 
-                {/* Bottom row: tag + button */}
-                <div className="flex items-center justify-between gap-3 pt-1">
+                {/* Bottom row: tag + button – stacks nicely on mobile */}
+                <div className="flex flex-col gap-2 pt-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
                   <span className="inline-flex items-center rounded-full bg-slate-950/70 px-2.5 py-1 text-[10px] font-medium text-slate-200">
                     {certificateBadgeLabel(cert.level)}
                   </span>

@@ -128,8 +128,8 @@ function DashboardPreview({ project }: { project: Project }) {
           </span>
         </div>
 
-        {/* Top KPIs row */}
-        <div className="mb-3 grid grid-cols-3 gap-2 text-[10px]">
+        {/* Top KPIs row (2 cols on mobile, 3 on sm+) */}
+        <div className="mb-3 grid grid-cols-2 sm:grid-cols-3 gap-2 text-[10px]">
           <div className="rounded-xl bg-slate-950/80 p-2">
             <p className="text-slate-400">Total Sales</p>
             <p className="mt-1 text-xs font-semibold text-cyan-300">
@@ -204,7 +204,7 @@ function DashboardPreview({ project }: { project: Project }) {
           </span>
         </div>
 
-        <div className="mb-3 grid grid-cols-3 gap-2 text-[10px]">
+        <div className="mb-3 grid grid-cols-2 sm:grid-cols-3 gap-2 text-[10px]">
           <div className="rounded-xl bg-slate-950/80 p-2">
             <p className="text-slate-400">Headcount</p>
             <p className="mt-1 text-xs font-semibold text-slate-100">520</p>
@@ -222,13 +222,13 @@ function DashboardPreview({ project }: { project: Project }) {
           </div>
         </div>
 
-        {/* Dept vs Attrition grid */}
+        {/* Dept vs Attrition grid – 2 cols on mobile, 4 on sm+ */}
         <div className="rounded-xl bg-gradient-tr from-rose-950 via-slate-950 to-slate-900/40 p-3">
           <div className="mb-2 flex items-center justify-between text-[10px] text-slate-300">
             <span>Attrition by Department</span>
             <span>Last 12 months</span>
           </div>
-          <div className="grid grid-cols-4 gap-1.5 text-[9px]">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-[9px]">
             {[
               { label: "Sales", level: "bg-rose-500/85", value: "22%" },
               { label: "Support", level: "bg-rose-400/85", value: "18%" },
@@ -255,8 +255,8 @@ function DashboardPreview({ project }: { project: Project }) {
         </div>
 
         {/* Legend + focus pill */}
-        <div className="mt-3 flex items-center justify-between text-[9px] text-slate-300">
-          <div className="flex items-center gap-2">
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-[9px] text-slate-300">
+          <div className="flex flex-wrap items-center gap-2">
             <span className="flex items-center gap-1">
               <span className="h-2 w-2 rounded-full bg-rose-500" /> High
             </span>
@@ -293,7 +293,7 @@ function DashboardPreview({ project }: { project: Project }) {
           </span>
         </div>
 
-        <div className="mb-3 grid grid-cols-3 gap-2 text-[10px]">
+        <div className="mb-3 grid grid-cols-2 sm:grid-cols-3 gap-2 text-[10px]">
           <div className="rounded-xl bg-slate-950/80 p-2">
             <p className="text-slate-400">Customers</p>
             <p className="mt-1 text-xs font-semibold text-slate-100">3,420</p>
@@ -310,7 +310,7 @@ function DashboardPreview({ project }: { project: Project }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-[1.2fr,1.8fr] gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-[1.2fr,1.8fr] gap-3">
           {/* Donut */}
           <div className="rounded-xl bg-gradient-br from-indigo-950 via-slate-950 to-slate-900/40 p-3 text-[10px]">
             <p className="mb-2 text-slate-400">Retention vs Churn</p>
@@ -345,9 +345,21 @@ function DashboardPreview({ project }: { project: Project }) {
           <div className="rounded-xl bg-slate-950/90 p-3 text-[10px]">
             <p className="mb-2 text-slate-400">Risk segments</p>
             {[
-              { label: "Low tenure · Low usage", value: 78, tone: "bg-rose-500/80" },
-              { label: "Medium tenure · Medium usage", value: 52, tone: "bg-amber-400/80" },
-              { label: "High tenure · High usage", value: 18, tone: "bg-emerald-400/80" },
+              {
+                label: "Low tenure · Low usage",
+                value: 78,
+                tone: "bg-rose-500/80",
+              },
+              {
+                label: "Medium tenure · Medium usage",
+                value: 52,
+                tone: "bg-amber-400/80",
+              },
+              {
+                label: "High tenure · High usage",
+                value: 18,
+                tone: "bg-emerald-400/80",
+              },
             ].map((seg) => (
               <div key={seg.label} className="mb-2 last:mb-0">
                 <div className="mb-1 flex items-center justify-between">
@@ -404,7 +416,7 @@ function DashboardPreview({ project }: { project: Project }) {
           </span>
         </div>
 
-        <div className="mb-3 grid grid-cols-3 gap-2 text-[10px]">
+        <div className="mb-3 grid grid-cols-2 sm:grid-cols-3 gap-2 text-[10px]">
           <div className="rounded-xl bg-slate-950/80 p-2">
             <p className="text-slate-400">Stores</p>
             <p className="mt-1 text-xs font-semibold text-slate-100">24</p>
@@ -423,7 +435,7 @@ function DashboardPreview({ project }: { project: Project }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-[1.7fr,1.3fr] gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-[1.7fr,1.3fr] gap-3">
           {/* Stock vs Sales bars */}
           <div className="rounded-xl bg-gradient-t from-slate-950 via-slate-900 to-slate-900/40 p-3 text-[10px]">
             <div className="mb-2 flex items-center justify-between text-slate-400">
@@ -521,7 +533,7 @@ function DashboardPreview({ project }: { project: Project }) {
           </span>
         </div>
 
-        <div className="mb-3 grid grid-cols-3 gap-2 text-[10px]">
+        <div className="mb-3 grid grid-cols-2 sm:grid-cols-3 gap-2 text-[10px]">
           <div className="rounded-xl bg-slate-950/80 p-2">
             <p className="text-slate-400">Overall Target</p>
             <p className="mt-1 text-xs font-semibold text-slate-100">
@@ -665,7 +677,7 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-14 sm:py-16">
+    <section id="projects" className="scroll-mt-24 py-14 sm:py-16">
       <div className="page-container space-y-6">
         <SectionTitle label="Projects" />
         <div className="grid gap-6 md:grid-cols-2">

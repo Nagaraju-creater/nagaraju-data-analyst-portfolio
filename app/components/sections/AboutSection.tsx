@@ -4,27 +4,28 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="py-14 sm:py-16 scroll-mt-20"
+      className="scroll-mt-24 py-12 sm:py-14 lg:py-16"
     >
       <div className="page-container">
         {/* Section label */}
-        <div className="flex items-center gap-3 mb-6">
+        <div className="mb-5 flex items-center gap-3 sm:mb-6">
           <div className="h-px flex-1 bg-gradient-r from-cyan-500/80 via-cyan-400/50 to-transparent" />
-          <h2 className="text-sm font-semibold tracking-[0.2em] uppercase text-cyan-400">
+          <h2 className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
             About
           </h2>
           <div className="h-px flex-1 bg-gradient-l from-cyan-500/80 via-cyan-400/50 to-transparent" />
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+        <div className="grid gap-7 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-10">
           {/* Left: Story */}
-          <div className="space-y-4 text-sm leading-relaxed text-slate-300">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+          <div className="space-y-4 text-[13px] leading-relaxed text-slate-300 sm:text-sm">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
               Who I am
             </p>
             <p>
-              I&apos;m <span className="font-semibold text-cyan-200">Nagaraju K</span>,
-              an engineering graduate who fell in love with data. I completed my{" "}
+              I&apos;m{" "}
+              <span className="font-semibold text-cyan-200">Nagaraju K</span>, an
+              engineering graduate who fell in love with data. I completed my{" "}
               <span className="font-semibold text-cyan-200">
                 B.E. in Aeronautical Engineering
               </span>{" "}
@@ -36,13 +37,10 @@ export default function AboutSection() {
               During college, I realised I enjoyed digging into numbers more than
               anything else — understanding why something happened, not just that
               it happened. That curiosity naturally pulled me towards{" "}
-              <span className="font-semibold text-cyan-200">
-                data analytics
-              </span>
-              .
+              <span className="font-semibold text-cyan-200">data analytics</span>.
             </p>
 
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 pt-2">
+            <p className="pt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
               What I do
             </p>
             <p>
@@ -63,11 +61,11 @@ export default function AboutSection() {
             </p>
 
             <p>
-              I enjoy the full journey — from messy spreadsheets and raw tables
-              to polished visuals that help stakeholders make confident decisions.
+              I enjoy the full journey — from messy spreadsheets and raw tables to
+              polished visuals that help stakeholders make confident decisions.
             </p>
 
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 pt-2">
+            <p className="pt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
               Right now
             </p>
             <p>
@@ -86,16 +84,16 @@ export default function AboutSection() {
 
           {/* Right: Highlight cards / mini-timeline */}
           <div className="space-y-4">
-            {/* Stats row */}
-            <div className="grid grid-cols-3 gap-3 text-center">
-              <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 px-3 py-4 shadow-md shadow-cyan-500/10">
+            {/* Stats row – 2 columns on mobile, 3 on sm+ */}
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 text-center">
+              <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 px-3 py-3 sm:py-4 shadow-md shadow-cyan-500/10">
                 <p className="text-[11px] text-slate-400">Degree</p>
                 <p className="mt-1 text-xs font-semibold text-slate-100">
                   B.E. Aero
                 </p>
                 <p className="mt-0.5 text-[11px] text-cyan-300">CGPA 8.37</p>
               </div>
-              <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 px-3 py-4 shadow-md shadow-cyan-500/10">
+              <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 px-3 py-3 sm:py-4 shadow-md shadow-cyan-500/10">
                 <p className="text-[11px] text-slate-400">Core Tools</p>
                 <p className="mt-1 text-xs font-semibold text-slate-100">
                   SQL · Excel
@@ -104,7 +102,7 @@ export default function AboutSection() {
                   Power BI · Tableau
                 </p>
               </div>
-              <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 px-3 py-4 shadow-md shadow-cyan-500/10">
+              <div className="rounded-2xl border border-slate-700/70 bg-slate-900/70 px-3 py-3 sm:py-4 shadow-md shadow-cyan-500/10">
                 <p className="text-[11px] text-slate-400">Focus</p>
                 <p className="mt-1 text-xs font-semibold text-slate-100">
                   Data
@@ -117,10 +115,10 @@ export default function AboutSection() {
 
             {/* Timeline-style card */}
             <div className="rounded-2xl border border-slate-700/80 bg-slate-900/80 p-4 shadow-md shadow-cyan-500/10">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                 Journey so far
               </p>
-              <ol className="mt-3 space-y-3 text-xs text-slate-300">
+              <ol className="mt-3 space-y-3 text-[11px] text-slate-300 sm:text-xs">
                 <li className="flex gap-3">
                   <span className="mt-0.5 h-2 w-2 rounded-full bg-cyan-400" />
                   <div>
@@ -162,8 +160,8 @@ export default function AboutSection() {
             </div>
 
             {/* Strengths card */}
-            <div className="rounded-2xl border border-slate-700/80 bg-slate-900/80 p-4 shadow-md shadow-cyan-500/10 text-xs text-slate-300">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+            <div className="rounded-2xl border border-slate-700/80 bg-slate-900/80 p-4 text-[11px] text-slate-300 shadow-md shadow-cyan-500/10 sm:text-xs">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                 How I work
               </p>
               <ul className="mt-3 space-y-2">

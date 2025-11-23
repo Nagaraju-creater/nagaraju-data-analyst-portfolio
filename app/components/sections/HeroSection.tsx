@@ -20,8 +20,8 @@ export default function HeroSection() {
       </div>
 
       {/* Compact vertical padding */}
-      <div className="page-container relative z-10 py-6 sm:py-7 lg:py-8">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+      <div className="page-container relative z-10 py-6 sm:py-8 lg:py-10">
+        <div className="flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
           {/* Left: Text content */}
           <div className="max-w-xl space-y-4">
             {/* Availability + small context pill row */}
